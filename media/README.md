@@ -1,8 +1,16 @@
-## Headway 1 MP4 media
+# Install Headway 1 media
 
-The course pages expect these local files:
+The website expects the media folders below the repository root.
 
-- `videos/unit-01.mp4` through `videos/unit-12.mp4` — main unit videos.
-- `openers/unit-01-opener.mp4` through `openers/unit-12-opener.mp4` — opening videos.
+1. Extract `Headway-1-Media-Pack.zip` into the repository root. It creates:
+   - `media/videos/unit-01.mp4` … `unit-12.mp4`
+   - `media/openers/unit-01-opener.mp4` … `unit-12-opener.mp4`
+2. Extract `Headway-1-Audio-Pack.zip` into the same repository root. It creates:
+   - `media/audio/index.json`
+   - `media/audio/student-book/cd1`, `cd2`, `cd3`
+   - `media/audio/workbook/unit-01` … `unit-12`
+3. Open GitHub Desktop, select the `Headway-1` repository, review the new `media/` files, enter a commit message, choose **Commit to main**, then **Push origin**.
 
-Extract the provided `Headway-1-Media-Pack.zip` at the repository root. It contains the complete `media/` folder. Then commit and push the folder so GitHub Pages can serve the MP4 files.
+Do not extract the ZIPs inside another nested `Headway-1` folder. The resulting paths must start exactly with `media/`.
+
+The players use local HTML5 `<video>` and `<audio>` sources. They do not use YouTube links. GitHub Pages cannot play media files that are only in a ZIP or on your computer; the extracted files must be committed and pushed to GitHub.
