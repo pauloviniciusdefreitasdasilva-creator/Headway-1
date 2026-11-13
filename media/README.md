@@ -13,4 +13,4 @@ The website expects the media folders below the repository root.
 
 Do not extract the ZIPs inside another nested `Headway-1` folder. The resulting paths must start exactly with `media/`.
 
-The players use local HTML5 `<video>` and `<audio>` sources. They do not use YouTube links. GitHub Pages cannot play media files that are only in a ZIP or on your computer; the extracted files must be committed and pushed to GitHub.
+The players use local HTML5 video and audio sources. They do not use YouTube links. GitHub Pages cannot serve media files that are only in a ZIP or on your computer; the extracted files must be committed and pushed to GitHub.
