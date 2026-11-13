@@ -14,7 +14,7 @@ Single-site companion for Headway Elementary 5th Edition (A1–A2).
 
 ## Files
 - `index.html`: lightweight GitHub Pages entry point.
-- `course.html.gz`: compressed complete course loaded and decompressed in the browser.
+- `course-data/part01.txt` … `part08.txt`: eight base64 segments of the compressed course data. The loader joins, decodes and decompresses them in the browser.
 
 The voice buttons use the browser/device English text-to-speech engine. They are not original publisher audio recordings.
 
