@@ -34,9 +34,19 @@ small{font-size:11px;color:#94a3bb}
   const error=document.getElementById('error');
   try{
     if(!('DecompressionStream' in window)) throw new Error('Este navegador não oferece suporte à descompressão necessária. Atualize o Chrome, Edge, Firefox ou Safari.');
-    const response=await fetch('./course.html.gz',{cache:'no-store'});
-    if(!response.ok) throw new Error('Não foi possível carregar o arquivo do curso (HTTP '+response.status+').');
-    const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
+    status.textContent='Carregando os dados das 12 unidades…';
+    const paths=Array.from({length:8},(_,i)=>'./course-data/part'+String(i+1).padStart(2,'0')+'.txt');
+    const pieces=await Promise.all(paths.map(async path=>{
+      const response=await fetch(path,{cache:'no-store'});
+      if(!response.ok) throw new Error('Não foi possível carregar '+path+' (HTTP '+response.status+').');
+      return (await response.text()).trim();
+    }));
+    const encoded=pieces.join('');
+    if(encoded.length!==47772) throw new Error('O arquivo de dados está incompleto ('+encoded.length+' caracteres recebidos).');
+    const binary=atob(encoded);
+    const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
+    const compressed=new Blob([bytes]).stream();
+    const stream=compressed.pipeThrough(new DecompressionStream('gzip'));
     const html=await new Response(stream).text();
     if(!html.includes('Headway 1')||!html.includes('unitsRoot')) throw new Error('O arquivo do curso foi carregado, mas não passou pela verificação de conteúdo.');
     document.open();
