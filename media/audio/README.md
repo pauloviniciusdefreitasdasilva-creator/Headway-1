@@ -1,0 +1,1 @@
+Extract the Audio Pack at the repository root. It adds `index.json`, 169 Student’s Book MP3s and 64 Workbook MP3s. Keep the paths intact, then commit and push the extracted files.
