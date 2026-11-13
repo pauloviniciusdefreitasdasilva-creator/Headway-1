@@ -19,4 +19,4 @@ Single-site companion for Headway Elementary 5th Edition (A1–A2).
 The voice buttons use the browser/device English text-to-speech engine. They are not original publisher audio recordings.
 
 ## GitHub Pages
-The site is intended to publish from the `main` branch and the repository root.
+To publish: open **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select branch `main` and folder `/(root)`, then click **Save**. The site URL will be `https://pauloviniciusdefreitasdasilva-creator.github.io/Headway-1/` after GitHub Pages finishes the first deployment.
