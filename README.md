@@ -1,20 +1,29 @@
-# Headway 1 · Complete Elementary Course
+# Headway 1 · Elementary A1–A2
 
-Responsive A1–A2 learning companion based on the Headway Elementary 5th Edition syllabus.
+Interactive learning companion with **12 independent unit guides** based on the Headway Elementary 5th Edition syllabus. No carousel: each unit opens at its own URL.
 
-## Course structure
-- 12 independent unit guides, opened one at a time from the sidebar or course index.
-- Each guide has its own grammar, model sentences, vocabulary, pronunciation, Everyday English, reading, practice, speaking, writing and study route.
-- Unit-by-unit video player with a segment for each of the 12 course videos.
-- Video comprehension questions are included in the automatic practice and feedback.
-- Cumulative checkpoints after the unit blocks.
-- Dark mode enabled by default, with a persistent light-mode toggle.
-- Browser speech synthesis with adjustable speed. This is generated device speech, not original publisher audio.
-- Progress and writing drafts are stored locally in the browser.
+## Project structure
+- `index.html`: course home and directory.
+- `units/unit-01.html` … `units/unit-12.html`: one guide page for each unit.
+- `data/course.json`: complete unit data, examples, explanations, vocabulary, readings, exercises, video information and viewing tasks.
+- `assets/course.css`: responsive styling.
+- `assets/course.js`: page rendering, checking, progress and writing tools.
+
+## Each unit guide contains
+- Learning goal and a suggested 60-minute lesson plan.
+- Detailed grammar explanation, forms, examples and common errors.
+- Example sentences with Portuguese translations and browser speech.
+- Vocabulary bank, pronunciation and Everyday English.
+- Unit-specific video player plus before/while/after viewing tasks.
+- Grammar and communication practice, vocabulary quiz and reading comprehension with feedback.
+- Speaking prompts and a writing task with word count, autosave and text export.
+- Completion tracking stored locally in the browser.
 
 ## Videos
-The guide embeds a public YouTube compilation of the 12 main unit videos, opening at the relevant unit timestamp. The player is externally hosted; it is not a copy of Oxford's MP4 files. For official unit-introduction clips and teacher resources, use [Headway 5th Edition at Oxford](https://www.oup.es/headway-5th-edition) and the Oxford resource platform.
+Every unit embeds the matching chapter from a public third-party video compilation, with links to other video hosting options and a playlist of unit openers/main videos. Video files are **not stored in this repository**; playback requires an internet connection and the external host to keep them available. This is not an official Oxford-hosted copy. Official Oxford materials may require Headway Online / Oxford Premium access. Chapter boundaries are approximate.
 
-## GitHub Pages
-The intended deployment source is branch `main`, folder `/(root)`. The public URL is:
-https://pauloviniciusdefreitasdasilva-creator.github.io/Headway-1/
+## Local use and publication
+Serve the folder with a local web server and open `index.html`. To publish, go to repository **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`, then Save.
+
+## Rights
+This is an independent learning companion with original explanations and exercises. Publisher video files are not redistributed; embeds access external hosting services.
