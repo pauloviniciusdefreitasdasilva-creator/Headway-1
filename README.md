@@ -1,29 +1,32 @@
 # Headway 1 · Elementary A1–A2
 
-Interactive learning companion with **12 independent unit guides** based on the Headway Elementary 5th Edition syllabus. No carousel: each unit opens at its own URL.
+Curso interativo complementar com **12 guias independentes** e navegação por unidade. Cada página pode ser aberta diretamente; não há carrossel.
 
-## Project structure
-- `index.html`: course home and directory.
-- `units/unit-01.html` … `units/unit-12.html`: one guide page for each unit.
-- `data/course.json`: complete unit data, examples, explanations, vocabulary, readings, exercises, video information and viewing tasks.
-- `assets/course.css`: responsive styling.
-- `assets/course.js`: page rendering, checking, progress and writing tools.
+## Conteúdo em cada unidade
+- Explicações gramaticais, estruturas, exemplos traduzidos e pronúncia.
+- Player HTML5 com **dois vídeos MP4 locais**: vídeo de abertura e vídeo principal da unidade.
+- Conversation Lab calibrado ao nível de cada unidade: 5 tópicos por unidade, 5 perguntas por tópico, vocabulário, useful chunks e missão em dupla.
+- Exercícios de gramática/comunicação, quiz de vocabulário e compreensão de leitura com feedback.
+- Speaking, writing, contador de palavras, salvamento local e exportação.
+- Modo escuro como padrão, alternância para modo claro e preferência salva.
+- Controle de progresso opcional, sem prazos ou duração obrigatória.
 
-## Each unit guide contains
-- Learning goal and a suggested 60-minute lesson plan.
-- Detailed grammar explanation, forms, examples and common errors.
-- Example sentences with Portuguese translations and browser speech.
-- Vocabulary bank, pronunciation and Everyday English.
-- Unit-specific video player plus before/while/after viewing tasks.
-- Grammar and communication practice, vocabulary quiz and reading comprehension with feedback.
-- Speaking prompts and a writing task with word count, autosave and text export.
-- Completion tracking stored locally in the browser.
+## Estrutura
+- `index.html`: página inicial e índice das unidades.
+- `units/unit-01.html` … `units/unit-12.html`: guias separados.
+- `data/course.json`: conteúdo e dados de cada unidade, incluindo conversação e caminhos dos vídeos.
+- `assets/course.css` / `assets/course.js`: interface e interações.
+- `media/videos/unit-01.mp4` … `unit-12.mp4`: vídeos principais.
+- `media/openers/unit-01-opener.mp4` … `unit-12-opener.mp4`: vídeos de abertura.
 
-## Videos
-Every unit embeds the matching chapter from a public third-party video compilation, with links to other video hosting options and a playlist of unit openers/main videos. Video files are **not stored in this repository**; playback requires an internet connection and the external host to keep them available. This is not an official Oxford-hosted copy. Official Oxford materials may require Headway Online / Oxford Premium access. Chapter boundaries are approximate.
+## Instalação dos vídeos
+Os caminhos dos players são locais. Depois de extrair o pacote de mídia no diretório raiz do repositório, a estrutura deverá conter as pastas `media/videos` e `media/openers`. Os MP4s são otimizados para reprodução no navegador e não redirecionam para YouTube.
 
-## Local use and publication
-Serve the folder with a local web server and open `index.html`. To publish, go to repository **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`, then Save.
+## GitHub Pages
+Em **Settings → Pages**, escolha **Deploy from a branch**, branch `main` e pasta `/(root)`. Depois de adicionar e enviar a pasta `media/`, os 24 players estarão disponíveis também no site publicado.
 
-## Rights
-This is an independent learning companion with original explanations and exercises. Publisher video files are not redistributed; embeds access external hosting services.
+## Ritmo de estudo
+Não há tempo pré-definido nem prazo para concluir uma unidade. O aluno pode avançar no próprio ritmo e repetir qualquer seção sempre que precisar.
+
+## Observação
+Companion independente de estudo. Os vídeos são arquivos MP4 fornecidos no pacote de mídia do projeto.
